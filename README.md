@@ -1,7 +1,6 @@
 # Dynamic Video Project
-## Progress
 
-Choosing react for framework
+Choosing React for framework
 
 # Getting Started with Create React App
 
