@@ -1,6 +1,7 @@
 # Dynamic Video Project
 
 Choosing React for framework
+Web Video Player [DONE!]
 
 # Getting Started with Create React App
 
