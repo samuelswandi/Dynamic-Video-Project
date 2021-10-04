@@ -1,6 +1,7 @@
 import './App.css';
+import VideoPlayer from './videoPlayer';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <div className="choiceButton">
@@ -11,7 +12,7 @@ function App() {
           Mie Goreng
         </button>
       </div>
-      <iframe className="videoPlayer" src="Video.mp4" allowfullscreen></iframe>
+        <VideoPlayer />
     </div>
   );
 }
