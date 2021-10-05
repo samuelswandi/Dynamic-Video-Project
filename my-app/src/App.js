@@ -1,9 +1,12 @@
 import './App.css';
+import VideoPlayer from './assets/videoPlayer';
+import Button from './assets/button';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <iframe src="Video.mp4" allowfullscreen></iframe>
+        <Button />
+        <VideoPlayer />
     </div>
   );
 }
