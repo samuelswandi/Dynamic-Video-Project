@@ -1,17 +1,11 @@
 import './App.css';
-import VideoPlayer from './videoPlayer';
+import VideoPlayer from './assets/videoPlayer';
+import Button from './assets/button';
 
 const App = () => {
   return (
     <div className="App">
-      <div className="choiceButton">
-        <button className="button1">
-          Mie Kuah
-        </button>
-        <button className="button2">
-          Mie Goreng
-        </button>
-      </div>
+        <Button />
         <VideoPlayer />
     </div>
   );

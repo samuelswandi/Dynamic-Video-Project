@@ -1,0 +1,28 @@
+<html>
+<head>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="choiceButton" id="choices">
+        <button class="button1">Mie Kuah</button>
+        <button class="button2">Mie Goreng</button>
+    </div>
+    <video id="vidPlayer" src="Video.mp4" controls>
+    </video>
+</body>
+<script>
+    document.getElementById("choices").style.display = 'none';
+    var v = document.getElementById("vidPlayer")
+    v.addEventListener('timeupdate',function(event){
+        let duration = event.srcElement.duration
+        let currentTime = event.srcElement.currentTime
+        console.log("Video is playing for: " + currentTime +" seconds")
+        if (duration - currentTime < 3) {
+            document.getElementById("choices").style.display = 'block';
+            console.log("visible")
+        }
+    })
+</script>
+
+
+</html>

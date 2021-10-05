@@ -5,4 +5,4 @@
 
 ## R1 
     - Make 2 buttons above the video player ✓
-    - Button that appared 3 seconds before the video end
+    - Button that appared 3 seconds before the video end ✓
