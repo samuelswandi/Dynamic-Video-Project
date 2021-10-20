@@ -4,25 +4,59 @@
 </head>
 <body>
     <div class="choiceButton" id="choices">
-        <button class="button1">Mie Kuah</button>
-        <button class="button2">Mie Goreng</button>
+        <button onClick="leftVideo()" class="button1" id="firstButton">Kiri</button>
+        <button onClick="rightVideo()" class="button2" id="secondButton">Kanan</button>
     </div>
-    <video id="vidPlayer" src="Video.mp4" controls>
+    <video id="vidPlayer1" src="Video.mp4" controls>
+    </video>
+    <video id="vidPlayer2" src="Video2.mkv" controls>
+    </video>
+    <video id="vidPlayer3" src="Video3.mkv" controls>
     </video>
 </body>
 <script>
+    var v1 = document.getElementById("vidPlayer1");
+    var v2 = document.getElementById("vidPlayer2");
+    var v3 = document.getElementById("vidPlayer3");
+    var b1 = document.getElementById("firstButton");
+    var b2 = document.getElementById("secondButton");
+    v2.style.display = 'none';
+    v3.style.display = 'none';
     document.getElementById("choices").style.display = 'none';
-    var v = document.getElementById("vidPlayer")
-    v.addEventListener('timeupdate',function(event){
+    showButton(v1)
+
+    function showButton(v) {
+        v.addEventListener('timeupdate',function sb(event){
         let duration = event.srcElement.duration
         let currentTime = event.srcElement.currentTime
         console.log("Video is playing for: " + currentTime +" seconds")
         if (duration - currentTime < 3) {
             document.getElementById("choices").style.display = 'block';
-            console.log("visible")
-        }
-    })
+            console.log("visible");
+            this.removeEventListener('timeupdate',arguments.callee,false);
+            }
+        })
+    }
+
+    function leftVideo() {
+        document.getElementById("choices").style.display = 'none';
+
+        v1.style.display = 'none';
+        v1.pause()
+
+        v2.style.display = 'block';
+        v2.play()
+    }
+
+    function rightVideo() {
+        document.getElementById("choices").style.display = 'none';
+
+        v1.style.display = 'none';
+        v1.pause()
+
+        v3.style.display = 'block';
+        v3.play()
+    }
+
 </script>
-
-
 </html>
