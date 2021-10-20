@@ -6,3 +6,6 @@
 ## R1 
     - Make 2 buttons above the video player ✓
     - Button that appared 3 seconds before the video end ✓
+
+## R2
+    - Changing video when button is clicked ✓
